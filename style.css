@@ -1,94 +1,53 @@
-.container{
-    border-radius: 40px;
-    background-color: #612457;
-    
-}
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, sans-serif;
-}
-
 body {
-    background: #e6e6e6;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-}
-.container:hover{
-    background-color: #741b608a;
-
+    font-family: Arial;
+    background: #f0f2f5;
 }
 
 .container {
-    background: #106d5936;
-    padding: 30px;
-    border-radius: 15px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    
+    width: 300px;
+    margin: 100px auto;
+    background: white;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
 }
 
-.heading {
-    margin-bottom: 20px;
-    font-weight: bold;
+input {
+    width: 90%;
+    padding: 10px;
+    margin: 10px;
 }
-
-.inputBox {
-    position: relative;
-    margin-bottom: 25px;
-}
-
-.inputBox input {
-    width: 100%;
-    padding: 12px;
-    border: 2px solid #ccc;
-    border-radius: 8px;
-    outline: none;
-    font-size: 14px;
-}
-
-.inputBox label {
-    position: absolute;
-    top: 50%;
-    left: 12px;
-    transform: translateY(-50%);
-    background: #fff;
-    padding: 0 5px;
-    color: #777;
-    transition: 0.3s;
-    pointer-events: none;
-}
-
-
-.inputBox input:focus + label,
-.inputBox input:valid + label {
-    top: -8px;
-    font-size: 12px;
-    color: #007bff;
-}
-
 
 button {
     width: 100%;
     padding: 10px;
+    background: blue;
+    color: white;
     border: none;
-    border-radius: 8px;
-    background: linear-gradient(to right, #0044cc, #007bff);
-    color: #fff;
-    font-weight: bold;
-    cursor: pointer;
 }
 
-
-p {
-    margin-top: 10px;
-    font-size: 14px;
+.links a {
+    display: block;
+    margin: 5px;
 }
 
-p a {
-    color: #007bff;
-    text-decoration: none;
+header {
+    background: blue;
+    color: white;
+    padding: 10px;
+}
+
+.menu {
+    background: #ddd;
+    padding: 10px;
+}
+
+.menu a {
+    margin: 10px;
+}
+
+.post {
+    background: white;
+    margin: 10px;
+    padding: 10px;
 }
