@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ultimate Web Code Library</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <style>
+        :root {
+            --primary-gradient: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+        }
+
+        body {
+            background-color: #f8f9fa;
+        }
+
+        .hero {
+            background: var(--primary-gradient);
+            color: white;
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        .search-container {
+            margin-top: -30px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .card {
+            border: none;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .code-area {
+            background: #1e1e1e;
+            color: #d4d4d4;
+            padding: 15px;
+            border-radius: 8px;
+            position: relative;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 14px;
+        }
+
+        .copy-btn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            padding: 2px 10px;
+            font-size: 12px;
+            border-radius: 5px;
+        }
+
+        pre {
+            margin-bottom: 0;
+            white-space: pre-wrap;
+        }
+    </style>
+</head>
+
+<body>
+
+    <section class="hero">
+        <div class="container">
+            <h1 class="display-4 fw-bold">Web Code Universe</h1>
+            <p class="lead">Duniya bhar ki mukhya web structures aur unke codes ek jagah.</p>
+        </div>
+    </section>
+
+    <div class="container search-container mb-5">
+        <div class="card p-2 shadow-lg">
+            <div class="input-group">
+                <span class="input-group-text bg-white border-0"><i class="bi bi-search text-muted"></i></span>
+                <input type="text" id="searchInput" class="form-control border-0 shadow-none"
+                    placeholder="Search structures (e.g. 'Social', 'E-commerce')...">
+            </div>
+        </div>
+    </div>
+
+    <div class="container pb-5">
+        <div class="row g-4" id="projectGrid">
+
+            <div class="col-md-6 col-lg-4 project-item">
+                <div class="card h-100 p-4" data-tags="social media instagram facebook">
+                    <h5 class="fw-bold"><i class="bi bi-people-fill text-primary"></i> Social Media Feed</h5>
+                    <p class="text-muted small">Profile, image post aur interaction buttons wala layout.</p>
+                    <div class="code-area">
+                        <button class="btn btn-outline-light btn-sm copy-btn" onclick="copyCode(this)">Copy</button>
+                        <pre id="code1">
+<div class="card shadow-sm">
+        <div class="p-2 d-flex align-items-center">
+            <img src="https://th.bing.com/th/id/OIP.kYhRt-UiWidhN5MoD02QmQHaEK?w=297&h=180&c=7&r=0&o=7&pid=1.7&rm=3" class="rounded-circle" width="40">
+            <strong class="ms-2">sad</strong>
+        </div>
+        <img src="https://th.bing.com/th/id/OIP.KIA0zlD8cX0MBfTv649i3QHaN4?w=182&h=342&c=7&r=0&o=7&pid=1.7&rm=3" class="card-img-top">
+        <div class="p-3">
+            <i class="bi bi-heart">cute</i>
+            <i class="bi bi-chat">lovly</i>
+        </div>
+    </div></pre>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4 project-item">
+                <div class="card h-100 p-4" data-tags="ecommerce shopping amazon">
+                    <h5 class="fw-bold"><i class="bi bi-cart-check-fill text-success"></i> E-Commerce Grid</h5>
+                    <p class="text-muted small">Product list, pricing aur buy now buttons.</p>
+                    <div class="code-area">
+                        <button class="btn btn-outline-light btn-sm copy-btn" onclick="copyCode(this)">Copy</button>
+                        <pre id="code2">
+    <div class="col-md-3">
+        <div class="product-box border text-center p-3">
+            <img src="https://th.bing.com/th/id/OIP.biHGoX2ShxaJqQF-NztMTQHaKN?w=115&h=188&c=7&r=0&o=7&pid=1.7&rm=3" height="500px" , width="250px">
+        <div class="text-center">
+            <h3>Fabric</h3>
+            <span class="text-success" , style="center">$1200</span>
+            <button class="btn btn-primary w-100">Buy</button>
+        </div>
+    </div>
+    </div></pre>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4 project-item">
+                <div class="card h-100 p-4" data-tags="portfolio resume personal cv">
+                    <h5 class="fw-bold"><i class="bi bi-person-badge text-danger"></i> Portfolio Layout</h5>
+                    <p class="text-muted small">Clean, modern aur professional resume style.</p>
+                    <div class="code-area">
+                        <button class="btn btn-outline-light btn-sm copy-btn" onclick="copyCode(this)">Copy</button>
+                        <pre id="code3">
+<div>
+        <section class="vh-100 d-flex align-items-center justify-content-center bg-light">
+
+            <div class="container">
+
+                <div class="p-5 shadow-lg rounded-4 bg-white mx-auto" style="max-width: 700px;">
+
+                    <div class="portfolio-content text-center">
+                        <h1 class="display-3 fw-bold text-dark mb-3">
+                            Hi, I'm a happy <span class="text-primary">Developer</span>
+                        </h1>
+
+                        <p class="lead text-muted mb-4">
+                            Building logic with passion and creating digital experiences.
+                        </p>
+
+                        <div class="cta-actions">
+                            <a href="#work" class="btn btn-dark btn-lg px-5 rounded-pill shadow-sm">
+                                <i class="bi bi-briefcase me-2"></i>My Projects
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </div></pre>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        // Search 
+        document.getElementById('searchInput').addEventListener('keyup', function () {
+            let filter = this.value.toLowerCase();
+            let items = document.querySelectorAll('.project-item');
+
+            items.forEach(item => {
+                let tags = item.querySelector('.card').getAttribute('data-tags');
+                if (tags.toLowerCase().includes(filter)) {
+                    item.style.display = "";
+                } else {
+                    item.style.display = "none";
+                }
+            });
+        });
+
+        //  Clipboard Function
+        function copyCode(btn) {
+            const code = btn.nextElementSibling.innerText;
+            navigator.clipboard.writeText(code).then(() => {
+                const originalText = btn.innerText;
+                btn.innerText = "Copied!";
+                btn.classList.replace('btn-outline-light', 'btn-success');
+                setTimeout(() => {
+                    btn.innerText = originalText;
+                    btn.classList.replace('btn-success', 'btn-outline-light');
+                }, 2000);
+            });
+        }
+    </script>
+
+</body>
+
+</html>
