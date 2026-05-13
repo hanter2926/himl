@@ -1,0 +1,13 @@
+h1{
+    background-color: aliceblue;
+    color: blue;
+}
+li{
+    color: rgb(255, 77, 0);
+    padding: 50px;
+    display: flex;
+    hoverer{
+        background-color: rgb(68, 0, 255);
+        color: white;
+    }
+}
