@@ -1,53 +1,25 @@
+/* Custom Styles */
 body {
-    font-family: Arial;
-    background: #f0f2f5;
+    background-color: #f8f9fa;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.container {
-    width: 300px;
-    margin: 100px auto;
-    background: white;
-    padding: 20px;
-    text-align: center;
-    border-radius: 10px;
+.rounded-pill-start {
+    border-top-left-radius: 50px !important;
+    border-bottom-left-radius: 50px !important;
+    border-right: none;
 }
 
-input {
-    width: 90%;
-    padding: 10px;
-    margin: 10px;
+.rounded-pill-end {
+    border-top-right-radius: 50px !important;
+    border-bottom-right-radius: 50px !important;
 }
 
-button {
-    width: 100%;
-    padding: 10px;
-    background: blue;
-    color: white;
-    border: none;
+.custom-search input:focus {
+    box-shadow: none;
+    border-color: #dee2e6;
 }
 
-.links a {
-    display: block;
-    margin: 5px;
-}
-
-header {
-    background: blue;
-    color: white;
-    padding: 10px;
-}
-
-.menu {
-    background: #ddd;
-    padding: 10px;
-}
-
-.menu a {
-    margin: 10px;
-}
-
-.post {
-    background: white;
-    margin: 10px;
-    padding: 10px;
+.result-item h4:hover {
+    text-decoration: underline;
 }

@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap Practice Notes</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            padding: 20px;
+        }
+
+        .grid-col {
+            background-color: #f0f0f0;
+            border: 1px solid #ccc;
+            text-align: center;
+            padding: 10px;
+        }
+
+        .section-header {
+            margin-top: 40px;
+            margin-bottom: 20px;
+            color: #007bff;
+            border-bottom: 2px solid #007bff;
+            padding-bottom: 10px;
+        }
+
+        .flex-container-wrap {
+            display: flex;
+            background-color: #f8f9fa;
+            border: 1px solid #ddd;
+            margin-top: 20px;
+        }
+
+        .flex-item {
+            background-color: lightcoral;
+            color: white;
+            width: 150px;
+            height: 100px;
+            margin: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <h1 class="text-center mb-5">Web Development Notes Explanation</h1>
+
+        <h2 class="section-header">1. <u>Pagination</u> (Aapke Note mein: "Pagdicen")</h2>
+        <p>Aapne Pagination likha tha. Yeh code ek basic pagination menu banata hai jisme 'Previous', '1', '2', '3', aur
+            'Next' buttons hain.</p>
+        <nav aria-label="Page navigation example">
+            <ul class="pagination">
+                <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+                <li class="page-item"><a class="page-link" href="#">1</a></li>
+                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                <li class="page-item"><a class="page-link" href="#">Next</a></li>
+            </ul>
+        </nav>
+
+        <h2 class="section-header">2. <u>Grid System</u> (Aapke Note mein: "Grige-Gread")</h2>
+        <p>Yeh Bootstrap ka **12-column Grid System** hai. Maine 4 basic rows banai hain:</p>
+        <ul>
+            <li>VIK Poori RA width (col-12)</li>
+            <li>VIK POORI RAAadhi-aadhi width (do col-6)</li>
+            <li>Vik Teen barabar hisse (col-4)</li>
+            <li>Vik Nova Teen alowl sizes ke column</li>
+        </ul>
+
+        <div class="row mb-3">
+            <div class="col-12 grid-col">Full Width Column (col-12)</div>
+        </div>
+        <div class="row mb-3">
+            <div class="col-6 grid-col">Vkp (col-6)</div>
+            <div class="col-6 grid-col">V RAM (col-6)</div>
+        </div>
+        <div class="row mb-3">
+            <div class="col-4 grid-col">Ran pal</div>
+            <div class="col-4 grid-col">pal</div>
+            <div class="col-4 grid-col">Col 3/3</div>
+        </div>
+        <div class="row">
+            <div class="col-3 grid-col">Size 3</div>
+            <div class="col-6 grid-col">Size 6 (Beech ka bada)</div>
+            <div class="col-3 grid-col">Size 3</div>
+        </div>
+
+        <h2 class="section-header">3. <u>Carousel</u> (Aapke Note mein: "Crowgel")</h2>
+        <p>Yeh Bootstrap ka Carousel (Image Slider) hai. Isme maine ek fixed height (400px) ki teen Slides banai hain
+            taaki aap animation dekh sakein.</p>
+
+        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel"
+            style="max-width: 600px; margin: auto; height: 400px;">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+                    aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                    aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                    aria-label="Slide 3"></button>
+            </div>
+
+            <div class="carousel-inner h-100">
+                <div class="carousel-item active h-100" style="background-color: #add8e6;">
+                    <div class="d-flex h-100 align-items-center justify-content-center text-dark fs-3">Slide 1</div>
+                </div>
+                <div class="carousel-item h-100" style="background-color: #90ee90;">
+                    <div class="d-flex h-100 align-items-center justify-content-center text-dark fs-3">Slide 2</div>
+                </div>
+                <div class="carousel-item h-100" style="background-color: #ffb6c1;">
+                    <div class="d-flex h-100 align-items-center justify-content-center text-dark fs-3">Slide 3</div>
+                </div>
+
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+
+        <h2 class="section-header">4. <u>Flex Wrap</u></h2>
+        <p>Aapne note mein niche `Flex Wrap` likha hai. Yeh code darsata hai ki kaise flex items apni line badal dete
+            hain jab unke liye jagah nahi basti.</p>
+
+        <h4>Container without <u>Flex Wrap</u> (by default: no-wrap)</h4>
+        <div class="flex-container-wrap" style="flex-wrap: nowrap;">
+            <div class="flex-item">Item 1</div>
+            <div class="flex-item">Item 2</div>
+            <div class="flex-item">Item 3</div>
+            <div class="flex-item">Item 4</div>
+            <div class="flex-item">Item 5</div>
+        </div>
+
+        <h4>Container with <u>Flex Wrap</u> (`flex-wrap: wrap`)</h4>
+        <div class="flex-container-wrap" style="flex-wrap: wrap;">
+            <div class="flex-item">Item 1</div>
+            <div class="flex-item">Item 2</div>
+            <div class="flex-item">Item 3</div>
+            <div class="flex-item">Item 4</div>
+            <div class="flex-item">Item 5</div>
+        </div>
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.min.js"></script>
+</body>
+
+</html>
