@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="hi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apni Dukaan - Shopping Page</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">APNI DUKAAN</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Products</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Cart (0)</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header class="bg-primary text-white text-center py-5 mb-4">
+        <div class="container">
+            <h1 class="fw-light">Saste aur Achhe Products</h1>
+            <p class="lead">Aaj hi order karein aur bhari discount payein!</p>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="row g-4" id="product-container">
+        </div>
+    </div>
+
+    <footer>
+        <div class="container text-center">
+            <p>2026 Apni Dukaan Online Services. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        const products = [
+            "Smartphone", "Wireless Headphones", "Laptop Bag", "Smart Watch",
+            "Running Shoes", "Cotton T-Shirt", "Gaming Mouse", "Water Bottle",
+            "Coffee Mug", "Bluetooth Speaker", "Sunglasses", "Power Bank",
+            "Leather Wallet", "Keyboard", "Digital Camera", "Backpack",
+            "Fitness Band", "Table Lamp", "USB Cable", "Hard Drive",
+            "Hoodie", "Desk Organizer"
+        ];
+
+        const container = document.getElementById('product-container');
+
+        // 22 Products 
+        for (let i = 0; i < 22; i++) {
+            const productName = products[i] || `Product ${i + 1}`;
+            const price = Math.floor(Math.random() * 2000) + 199;
+
+            const cardHTML = `
+            <div class="col-6 col-md-4 col-lg-3">
+                <div class="card h-100 product-card">
+                    <img src="https://picsum.photos/300/200?random=${i}" class="card-img-top" alt="${productName}">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title">${productName}</h5>
+                        <p class="card-text text-muted small">Daily use ke liye behtareen product.</p>
+                        <div class="mt-auto">
+                            <p class="price">₹${price}</p>
+                            <button class="btn btn-outline-primary w-100 btn-sm">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        `;
+            container.innerHTML += cardHTML;
+        }
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.min.js"></script>
+</body>
+
+</html>
